@@ -26,8 +26,16 @@ export class LoginComponent {
   }
   
   submitForm() {
-    // Implementation to be added
-  }
+    this.authService.login(this.loginForm.value).subscribe({
+        next: (res) => {
+            console.log(res);
+        },
+        error: () => {
+            this.message.error('Bad credentials', { nzDuration: 5000 });
+        }
+    });
+}
+
   
 
 }
