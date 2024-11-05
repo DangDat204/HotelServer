@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../register/services/auth/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { Router } from 'express';
+import { UserStorageService } from '../../services/storage/use-storage.service';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-login',
@@ -29,6 +31,15 @@ export class LoginComponent {
     this.authService.login(this.loginForm.value).subscribe({
         next: (res) => {
             console.log(res);
+            if(res.userId != null){
+              const user = {
+                id :res.userId,
+                role :res.userRole,
+                
+              }
+              UserStorageService.saveUser(user);
+              UserStorageService.saveToken(res.jwt);
+            }
         },
         error: () => {
             this.message.error('Bad credentials', { nzDuration: 5000 });
