@@ -18,4 +18,18 @@ export class RegisterComponent {
       name: [null, Validators.required]
     });
   }
+ 
 }
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  // Your component logic here
+}
+
+
+  
