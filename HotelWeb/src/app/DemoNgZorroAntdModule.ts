@@ -49,11 +49,33 @@ import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 @NgModule({
-    imports: [
-      NzMessageModule,
-      // các module khác
-    ],
-  })
+  exports: [
+    NzAffixModule,
+    NzAlertModule,
+    NzAnchorModule,
+    NzAutocompleteModule,
+    NzBackTopModule,
+    NzBadgeModule,
+    NzButtonModule,
+    NzBreadCrumbModule,
+    NzCalendarModule,
+    NzCardModule,
+    NzCarouselModule,
+    NzCascaderModule,
+    NzCheckboxModule,
+    NzCollapseModule,
+    NzCommentModule,
+    NzDatePickerModule,
+    NzDescriptionsModule,
+    NzDividerModule,
+    NzDrawerModule,
+    NzEmptyModule,
+    NzFormModule,
+    NzGridModule,
+    NzI18nModule
+  ]
+})
+
 export class DemoNgZorroModule {
 
 }
