@@ -27,8 +27,8 @@ export class RegisterComponent {
   submitForm() {
     this.authService.register(this.registerForm.value).subscribe(res => {
       if (res.id != null) {
-        this.message.success('Signup successful', { nzDuration: 5000 });
-        this.router.navigateByUrl('/');
+        this.message.success("Signup successful", { nzDuration: 5000 });
+        this.router.navigateByUrl("/");
       } else {
         this.message.error(`${res.message}`, { nzDuration: 5000 });
       }
