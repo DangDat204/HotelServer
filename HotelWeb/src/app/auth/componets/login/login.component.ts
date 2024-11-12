@@ -7,8 +7,8 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
+  // standalone: true,
+  // imports: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
