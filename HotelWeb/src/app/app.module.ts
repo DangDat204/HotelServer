@@ -34,6 +34,7 @@ registerLocaleData(en);
     AppComponent,
     RegisterComponent,
     LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
