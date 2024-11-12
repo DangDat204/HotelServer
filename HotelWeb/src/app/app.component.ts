@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { UserStorageService } from './auth/services/storage/use-storage.service';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // Your component logic here
   title = 'HotelWeb';
+  
 
   isCustomerLoggedIn: boolean = UserStorageService.isCustomerLoggedIn();
   isAdminLoggedIn: boolean = UserStorageService.isAdminLoggedIn();
@@ -25,8 +29,11 @@ export class AppComponent {
 
   logout() {
     UserStorageService.signOut();
-    this.router.navigateByUrl("/");
+
+    this.router.navigateByUrl('/');
   }
+
+
 }
 
 

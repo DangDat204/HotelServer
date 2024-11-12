@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { UserStorageService } from '../../services/storage/use-storage.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
